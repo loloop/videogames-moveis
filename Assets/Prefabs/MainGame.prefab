@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &186362
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 480444}
+  - 114: {fileID: 11489602}
+  m_Layer: 0
+  m_Name: MainGame
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &480444
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 186362}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11489602
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 186362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2d99e9b2bcb84dc0b13e621c7faf701, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  greenBallGO: {fileID: 150644, guid: 4220bf340f3df4205a2aae4fcd464ed6, type: 2}
+  yellowBallGO: {fileID: 188734, guid: 687ff4f2f342e4c058d7bebff8c3e778, type: 2}
+  topSpawn: {fileID: 11417828, guid: 8853f6506619e4fba876a2cc54263ba5, type: 2}
+  bottomSpawn: {fileID: 11479590, guid: 4593309adc03841a0a04a772d7d9fd51, type: 2}
+  mainBall: {fileID: 11450174, guid: 2c9bc6fcaae3748209907e0b5886cabe, type: 2}
+  ballVelocity: 3
+  maxBallVelocity: 6.5
+  score: 0
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: greenBall
+      value: 
+      objectReference: {fileID: 11433198, guid: 4220bf340f3df4205a2aae4fcd464ed6,
+        type: 2}
+    - target: {fileID: 0}
+      propertyPath: yellowBall
+      value: 
+      objectReference: {fileID: 11418596, guid: 687ff4f2f342e4c058d7bebff8c3e778,
+        type: 2}
+    - target: {fileID: 0}
+      propertyPath: topSpawn
+      value: 
+      objectReference: {fileID: 11417828, guid: 8853f6506619e4fba876a2cc54263ba5,
+        type: 2}
+    - target: {fileID: 0}
+      propertyPath: bottomSpawn
+      value: 
+      objectReference: {fileID: 11479590, guid: 4593309adc03841a0a04a772d7d9fd51,
+        type: 2}
+    - target: {fileID: 0}
+      propertyPath: mainBall
+      value: 
+      objectReference: {fileID: 11450174, guid: 2c9bc6fcaae3748209907e0b5886cabe,
+        type: 2}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 186362}
+  m_IsPrefabParent: 1
