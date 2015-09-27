@@ -44,7 +44,7 @@ namespace VideogamesMoveis.UI{
 		}
 		
 		public void EndGame(int score){
-			mainMenuCG.interactable = true;
+			StartCoroutine(WaitToInteract());
 			inGameCG.DOFade(0, animationTime);
 			if(HighScore.SetScore(score)){
 				highScoreText.text = "<color=green>New High Score!\n<size=100>" + score + "</size></color>";
@@ -53,6 +53,19 @@ namespace VideogamesMoveis.UI{
 			}
 			highScoreCG.DOFade(1, animationTime);
 			ResetScores();
+		}
+		
+		IEnumerator WaitToInteract(){
+			yield return new WaitForSeconds(0.5f);
+			mainMenuCG.interactable = true;			
+		}
+		
+		public void OpenCredits(){
+			GetComponent<Animator>().Play("MenuEnter");
+		}
+		
+		public void CloseCredits(){
+			GetComponent<Animator>().Play("MenuExit");
 		}
 		
 		void AnimateDisappearLeft(Text text){

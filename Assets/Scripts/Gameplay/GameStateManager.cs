@@ -9,6 +9,7 @@ namespace VideogamesMoveis{
 		public SpawnPoint topSpawn, bottomSpawn;
 		public MainBall mainBall;
 		public float ballVelocity = 0.5f, maxBallVelocity = 3.0f;
+		public AudioSource myAudio;
 		
 		float startBallVelocity;
 		int consecutiveBools = 0;
@@ -56,9 +57,16 @@ namespace VideogamesMoveis{
 		}
 		
 		public void ScoreUp(){
+			PlayScoreSound();
 			UI.InGame.sharedInstance.ScoreUp(++score);
 			SpawnBalls();
 			if(ballVelocity<maxBallVelocity) ballVelocity += 0.3f;
+		}
+		
+		void PlayScoreSound(){
+			float pitchFluctuation = 0.5f;
+			myAudio.pitch = 1.0f + Random.Range(-pitchFluctuation, pitchFluctuation);
+			myAudio.Play();
 		}
 		
 		public void GameFail(){		

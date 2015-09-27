@@ -8,16 +8,7 @@ namespace VideogamesMoveis{
 		float rotationTime = 0.3f;
 		bool interactable = true;
 		
-		public static void CorrectBallCollision(){
-			//increment score
-			//fire particles
-			//spawn new balls	
-		}
-		
-		public static void WrongBallCollision(){
-			//end game
-			//boo player
-		}
+		public Transform[] greenParticles, yellowParticles;
 		
 		void Update(){
 			if(((Input.touchCount >= 1) || (Input.GetMouseButtonDown(0))) && (interactable)){
@@ -34,7 +25,39 @@ namespace VideogamesMoveis{
 		
 		void RotateBall(){
 			Vector3 newRotation = new Vector3(0, 0, 180);
-			transform.DORotate(newRotation, rotationTime, RotateMode.LocalAxisAdd);	//just testing out okay???
+			transform.DORotate(newRotation, rotationTime, RotateMode.LocalAxisAdd);
+		}
+		
+		public IEnumerator FireParticles(){
+			//store original position and color
+			Vector3[] greenOriginalTransforms = new Vector3[greenParticles.Length];
+			Transform[] yellowOriginalTransforms = new Transform[yellowParticles.Length];
+			Color originalColor = new Color(1,1,1,1);
+			
+			//animate
+			for(int i = 0; i < greenParticles.Length; i++){
+				greenOriginalTransforms[i] = greenParticles[i].localPosition;
+				greenParticles[i].rotation = Quaternion.Euler(0,0, greenParticles[i].rotation.z + i * 20);
+				greenParticles[i].DOLocalMove(new Vector3(0, 2, 0), rotationTime);
+				
+				//greenParticles[i].GetComponent<SpriteRenderer>().DOFade(0, rotationTime);
+			}	
+			
+			yield return new WaitForSeconds(rotationTime);
+			
+			//reset everyone to original position
+			for(int i = 0; i < greenParticles.Length; i++){
+				greenParticles[i].position = greenOriginalTransforms[i];
+				greenParticles[i].GetComponent<SpriteRenderer>().color = originalColor;		  
+			}
+			
+			/*
+			for(int i = 0; i < yellowParticles.Length; i++){
+				yellowParticles[i] = yellowOriginalTransforms[i];
+				yellowParticles[i].GetComponent<SpriteRenderer>().color = originalColor;	
+			}
+			*/
+			
 		}
 		
 	}
