@@ -1,2 +1,2 @@
 # videogames-moveis
-Segundo o @hugoanjos: speedrun de gamedev
+Segundo o [@hugoanjos](http://github.com/hugoanjos): speedrun de gamedev
