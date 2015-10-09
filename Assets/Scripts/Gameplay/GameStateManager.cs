@@ -21,6 +21,13 @@ namespace VideogamesMoveis{
 		
 		public static GameStateManager sharedInstance;
 		
+		void Awake(){
+			//forcing the game to run decently
+			//TODO decouple this from the gamestate manager
+			QualitySettings.vSyncCount = 0;
+			Application.targetFrameRate = 60;
+		}
+		
 		void Start(){
 			if(sharedInstance==null){
 				sharedInstance = this;
@@ -84,6 +91,13 @@ namespace VideogamesMoveis{
 			greenBall = greenBallInstance.GetComponent<ColorBall>();
 			yellowBallInstance = (GameObject) Instantiate(yellowBallGO, topSpawn.transform.position, Quaternion.Euler(0,0,0));
 			yellowBall = yellowBallInstance.GetComponent<ColorBall>();
+		}
+		
+		void Update(){
+			//for my beloved Android users, thanks @ishimarumakoto for pointing this out
+			if(Input.GetKeyDown(KeyCode.Escape)){
+				Application.Quit();
+			}
 		}
 
 	}

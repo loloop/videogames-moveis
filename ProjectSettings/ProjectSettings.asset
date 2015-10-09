@@ -9,8 +9,8 @@ PlayerSettings:
   targetDevice: 2
   targetResolution: 0
   accelerometerFrequency: 0
-  companyName: mauriciocardozo
-  productName: Videogames Moveis
+  companyName: me.mauriciocardozo
+  productName: Mobile Videogames
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_ShowUnitySplashScreen: 1
@@ -84,16 +84,22 @@ PlayerSettings:
     16:9: 1
     Others: 1
   bundleIdentifier: me.mauriciocardozo.videogamesmoveis
-  bundleVersion: 1.0
-  preloadedAssets: []
+  bundleVersion: 1.0.2
+  preloadedAssets:
+  - {fileID: 186362, guid: 9b69a379439c54f62892644b1a982159, type: 2}
+  - {fileID: 150644, guid: 4220bf340f3df4205a2aae4fcd464ed6, type: 2}
+  - {fileID: 188734, guid: 687ff4f2f342e4c058d7bebff8c3e778, type: 2}
+  - {fileID: 188010, guid: 2c9bc6fcaae3748209907e0b5886cabe, type: 2}
+  - {fileID: 110796, guid: 8853f6506619e4fba876a2cc54263ba5, type: 2}
+  - {fileID: 157452, guid: 4593309adc03841a0a04a772d7d9fd51, type: 2}
   metroEnableIndependentInputSource: 0
   metroEnableLowLatencyPresentationAPI: 0
   xboxOneDisableKinectGpuReservation: 0
   virtualRealitySupported: 0
   productGUID: 6032ae6e3696943dbaedb56b330d10ac
-  AndroidBundleVersionCode: 1
+  AndroidBundleVersionCode: 3
   AndroidMinSdkVersion: 9
-  AndroidPreferredInstallLocation: 1
+  AndroidPreferredInstallLocation: 0
   aotOptions: 
   apiCompatibilityLevel: 2
   stripEngineCode: 1
@@ -138,7 +144,7 @@ PlayerSettings:
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: 
+  AndroidKeystoreName: /Users/mauriciocardozo/Desktop/asenhadestekeystoreemauricio.keystore
   AndroidKeyaliasName: 
   AndroidTVCompatibility: 0
   AndroidIsGame: 1

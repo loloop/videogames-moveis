@@ -47,7 +47,7 @@ namespace VideogamesMoveis.UI{
 			StartCoroutine(WaitToInteract());
 			inGameCG.DOFade(0, animationTime);
 			if(HighScore.SetScore(score)){
-				highScoreText.text = "<color=green>New High Score!\n<size=100>" + score + "</size></color>";
+				highScoreText.text = "\n\n<color=green>New High Score!\n<size=100>" + score + "</size></color>";
 			} else {
 				highScoreText.text = "<color=red>You Lost! :(\n<size=50>Your Score: " + score + "</size></color>\n<size=40>High Score: " + HighScore.GetHighScore() + "</size>";
 			}

@@ -28,7 +28,9 @@ namespace VideogamesMoveis{
 			transform.DORotate(newRotation, rotationTime, RotateMode.LocalAxisAdd);
 		}
 		
-		public IEnumerator FireParticles(){
+		public IEnumerator FireParticles(){ 
+			yield return null;
+			/*
 			//store original position and color
 			Vector3[] greenOriginalTransforms = new Vector3[greenParticles.Length];
 			Transform[] yellowOriginalTransforms = new Transform[yellowParticles.Length];
